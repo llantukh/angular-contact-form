@@ -10,7 +10,7 @@ function ContactController ($scope, $http) {
       $scope.contacts = resp.data;
     });
   };
-  
+
   init();
 
   $scope.validateName = function (name) {
@@ -59,8 +59,8 @@ function ContactController ($scope, $http) {
     $http.post(SERVER_URL, contact).then(function (resp) {
       let contact = resp.data;
       $scope.contacts.push(contact);
-      console.log($scope.contacts);
     });
+    $scope.contact = [];
   };
 };
 
