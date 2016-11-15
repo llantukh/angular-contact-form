@@ -7,39 +7,45 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
+  <body ng-app = "app">
     <div class="container" ng-controller = "ContactController">
+
       <form ng-submit="addContact(contact)"
+
         <label class="label">Name</label>
         <p class="control">
-          <input class="input is-danger" type="text"
-            ng-model="contact.name" ng-keyup="validateName(contact.name)">
-          <i class="fa fa-warning"></i>
-          <span class="help is-danger">{{ errors.name }}</span>
+          <input class="input" type="text"
+            ng-model="contact.name"
+            ng-keyup="validateName(contact.name)"/>
+          <span class="input-error">{{ errors.name }}</span>
         </p>
+
         <label class="label">Email</label>
           <p class="control has-icon has-icon-right">
-            <input class="input is-danger" type="text"
-              ng-model="contact.email" ng-keyup="validateEmail(contact.email)">
-            <i class="fa fa-warning"></i>
-            <span class="help is-danger">{{ errors.email }}</span>
+            <input class="input" type="text"
+              ng-model="contact.email"
+              ng-keyup="validateEmail(contact.email)"/>
+            <span class="input-error">{{ errors.email }}</span>
           </p>
+
         <label class="label">Website</label>
           <p class="control has-icon has-icon-right">
-            <input class="input is-danger" type="text"
-              ng-model="contact.website" ng-keyup="validateWebsite(contact.website)">
-            <i class="fa fa-warning"></i>
-            <span class="help is-danger">{{ errors.website }}</span>
+            <input class="input" type="text"
+              ng-model="contact.website"
+              ng-keyup="validateWebsite(contact.website)"/>
+            <span class="input-error">{{ errors.website }}</span>
           </p>
+
         <label class="label">Message</label>
           <p class="control">
-            <textarea class="textarea" ng-model="contact.message"
+            <textarea class="textarea"
+              ng-model="contact.message"
               ng-keyup="validateMessage(contact.message)"></textarea>
-            <!-- <input class="input is-danger" type="text"> -->
-            <i class="fa fa-warning"></i>
-            <span class="help is-danger">{{ errors.message }}</span>
+            <span class="input-error">{{ errors.message }}</span>
           </p>
+
         <button class="button is-primary">Submit</button>
+
       </form>
     </div>
     <script src="js/bundle.js"></script>
