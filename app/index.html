@@ -3,13 +3,37 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cool Project</title>
+    <title>Angular Contact Form</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <div class="container">
-      <p>Welcome to your life.</p>
+
+      <span class = "title">Customer Contact Informtaion</span>
+
+      <label class="label">Name</label>
+      <p class="control">
+        <input class="input" type="text">
+      </p>
+      <label class="label">Email</label>
+        <p class="control has-icon has-icon-right">
+          <input class="input is-danger" type="text">
+          <i class="fa fa-warning"></i>
+          <span class="help is-danger">This email is invalid</span>
+        </p>
+      <label class="label">Website</label>
+        <p class="control has-icon has-icon-right">
+          <input class="input is-danger" type="text">
+          <i class="fa fa-warning"></i>
+          <span class="help is-danger">This email is invalid</span>
+        </p>
+      <label class="label">Message</label>
+        <p class="control">
+          <textarea class="textarea"></textarea>
+        </p>
+      <button class="button is-primary">Submit</button>
+
     </div>
     <script src="js/bundle.js"></script>
   </body>
