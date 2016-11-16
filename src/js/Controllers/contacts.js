@@ -58,7 +58,7 @@ function ContactController ($scope, $http) {
   $scope.addContact = function (contact) {
     $http.post(SERVER_URL, contact).then(function (resp) {
       let contact = resp.data;
-      $scope.contacts.push(contact);
+      $scope.contacts.unshift(contact);
     });
     $scope.contact = [];
   };
